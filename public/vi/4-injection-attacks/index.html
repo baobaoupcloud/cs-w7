@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: CS50</title>
+    <title>Tấn công SQL Injection :: CS50</title>
 
     
-    <link href="/css/nucleus.css?1728208248" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1728208248" rel="stylesheet">
-    <link href="/css/hybrid.css?1728208248" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1728208248" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1728208248" rel="stylesheet">
-    <link href="/css/auto-complete.css?1728208248" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1728208248" rel="stylesheet">
-    <link href="/css/theme.css?1728208248" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1728208248" rel="stylesheet">
+    <link href="/css/nucleus.css?1728209755" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1728209755" rel="stylesheet">
+    <link href="/css/hybrid.css?1728209755" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1728209755" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1728209755" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728209755" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1728209755" rel="stylesheet">
+    <link href="/css/theme.css?1728209755" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1728209755" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1728208248" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1728209755" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1728208248"></script>
+    <script src="/js/jquery-3.3.1.min.js?1728209755"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/tags/">
+  <body class="" data-url="/vi/4-injection-attacks/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1728208248"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1728208248"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1728209755"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1728209755"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1728208248"></script>
+<script type="text/javascript" src="/js/search.js?1728209755"></script>
 
     
   </div>
@@ -162,7 +162,7 @@
     
     <li data-nav-id="/vi/4-injection-attacks/" title="Tấn công SQL Injection" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/vi/4-injection-attacks/">
@@ -213,7 +213,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/tags/">English</option>
+                      <option id="en" value="//localhost:1313/4-injection-attacks/">English</option>
                     
                   
               
@@ -227,7 +227,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/tags/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-injection-attacks/" selected>Tiếng Việt</option>
                     
                   
               
@@ -294,6 +294,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://baobaoupcloud.github.io/cs/4-Injection-Attacks/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -314,7 +325,7 @@
             
           
           
-            <a href='/vi/'>CS50 Tuần 5</a> > Tags
+            <a href='/vi/'>CS50 Tuần 7</a> > Tấn công SQL Injection
           
         
           
@@ -325,7 +336,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -341,9 +360,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Tags
+              Tấn công SQL Injection
             </h1>
           
 
@@ -351,11 +368,26 @@
 
 
 
+	<p>Một trong những vấn đề thường gặp trong các ứng dụng SQL thực tế là <strong>tấn công SQL Injection</strong>. Đây là một hình thức tấn công trong đó kẻ xấu có thể chèn mã SQL độc hại vào hệ thống thông qua các đầu vào của người dùng.</p>
+<h4 id="ví-dụ-về-tấn-công-sql-injection">Ví dụ về tấn công SQL Injection</h4>
+<p>Hãy xem xét một màn hình đăng nhập đơn giản:</p>
+<p><img alt="login" src="https://raw.githubusercontent.com/baobaoupcloud/cs-w7/main/static/images/4.injectionattacks/injectionattacks1.png"></p>
+<p>Nếu mã nguồn của hệ thống không có các biện pháp bảo vệ phù hợp, kẻ xấu có thể dễ dàng chèn mã SQL độc hại. Hãy xem xét ví dụ sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;SELECT COUNT(*) FROM users WHERE username = ? AND password = ?&#34;</span>, username, password)
+</span></span></code></pre></div><p>Ở đây, các dấu chấm hỏi (<code>?</code>) đóng vai trò như các <strong>placeholder</strong> giúp đảm bảo rằng mọi dữ liệu người dùng nhập vào sẽ được xác thực trước khi được đưa vào câu truy vấn SQL. Điều này giúp ngăn chặn các đoạn mã độc hại chèn vào hệ thống.</p>
+<h4 id="không-sử-dụng-chuỗi-định-dạng-trong-truy-vấn">Không sử dụng chuỗi định dạng trong truy vấn</h4>
+<p>Bạn không bao giờ nên sử dụng chuỗi định dạng (formatted strings) trong các câu lệnh truy vấn như ví dụ dưới đây hoặc tin tưởng vào bất kỳ đầu vào nào từ người dùng mà không kiểm tra kỹ.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = &#39;</span><span style="color:#e6db74">{</span>username<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39; AND password = &#39;</span><span style="color:#e6db74">{</span>password<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;&#34;</span>)
+</span></span></code></pre></div><p>Cách viết trên dễ dẫn đến nguy cơ tấn công SQL Injection. Thay vào đó, bạn nên sử dụng cú pháp có dấu chấm hỏi (<code>?</code>) như trong ví dụ trước.</p>
+<h4 id="tính-năng-bảo-vệ-của-thư-viện-cs50">Tính năng bảo vệ của thư viện CS50</h4>
+<p>Khi bạn sử dụng thư viện CS50, thư viện sẽ tự động xử lý và loại bỏ các ký tự nguy hiểm có khả năng gây ra tấn công SQL Injection. Thư viện này sẽ đảm bảo rằng các đoạn mã do người dùng nhập vào sẽ được xử lý an toàn trước khi truyền vào truy vấn SQL.</p>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;SELECT COUNT(*) FROM users WHERE username = ? AND password = ?&#34;</span>, username, password)
+</span></span></code></pre></div><p>Đoạn mã trên không chỉ giúp ngăn chặn các cuộc tấn công SQL Injection mà còn đảm bảo rằng dữ liệu đầu vào được xử lý an toàn, tránh rủi ro bảo mật.</p>
+<p>Vậy là kết thúc tuần 7 ^^</p>
 
 
-<ul>
-	
-</ul>
+
 
 
 <footer class=" footline" >
@@ -444,6 +476,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -463,6 +496,8 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/vi/3-sql-in-python/" title="SQL với Python"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/1-flat-file-databases/" title="Cơ sở dữ liệu dạng Flat-File" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -475,19 +510,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1728208248"></script>
-    <script src="/js/perfect-scrollbar.min.js?1728208248"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1728208248"></script>
-    <script src="/js/jquery.sticky.js?1728208248"></script>
-    <script src="/js/featherlight.min.js?1728208248"></script>
-    <script src="/js/highlight.pack.js?1728208248"></script>
+    <script src="/js/clipboard.min.js?1728209755"></script>
+    <script src="/js/perfect-scrollbar.min.js?1728209755"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1728209755"></script>
+    <script src="/js/jquery.sticky.js?1728209755"></script>
+    <script src="/js/featherlight.min.js?1728209755"></script>
+    <script src="/js/highlight.pack.js?1728209755"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1728208248"></script>
-    <script src="/js/learn.js?1728208248"></script>
-    <script src="/js/hugo-learn.js?1728208248"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1728209755"></script>
+    <script src="/js/learn.js?1728209755"></script>
+    <script src="/js/hugo-learn.js?1728209755"></script>
 
-    <link href="/mermaid/mermaid.css?1728208248" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1728208248"></script>
+    <link href="/mermaid/mermaid.css?1728209755" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1728209755"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

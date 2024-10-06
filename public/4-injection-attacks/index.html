@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: CS50</title>
+    <title>Injection Attacks :: CS50</title>
 
     
     <link href="/css/nucleus.css?1728208248" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/tags/">
+  <body class="" data-url="/4-injection-attacks/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -61,7 +61,7 @@
 <script type="text/javascript" src="/js/auto-complete.js?1728208248"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
 <script type="text/javascript" src="/js/search.js?1728208248"></script>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-flat-file-databases/" title="Cơ sở dữ liệu dạng Flat-File" class="dd-item 
+    <li data-nav-id="/1-flat-file-databases/" title="Flat-file Databases" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-flat-file-databases/">
-           <b> 1. </b> Cơ sở dữ liệu dạng Flat-File
+      <a href="/1-flat-file-databases/">
+           <b> 1. </b> Flat-file Databases
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-relational-databases/" title="Cơ sở dữ liệu quan hệ" class="dd-item 
+    <li data-nav-id="/2-relational-databases/" title="Relational Databases" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-relational-databases/">
-           <b> 2. </b> Cơ sở dữ liệu quan hệ
+      <a href="/2-relational-databases/">
+           <b> 2. </b> Relational Databases
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,13 +134,13 @@
  
   
     
-    <li data-nav-id="/vi/3-sql-in-python/" title="SQL với Python" class="dd-item 
+    <li data-nav-id="/3-sql-in-python/" title="SQL in Python" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-sql-in-python/">
-           <b> 3. </b> SQL với Python
+      <a href="/3-sql-in-python/">
+           <b> 3. </b> SQL in Python
           
             <i class="fas fa-check read-icon"></i>
           
@@ -160,13 +160,13 @@
  
   
     
-    <li data-nav-id="/vi/4-injection-attacks/" title="Tấn công SQL Injection" class="dd-item 
+    <li data-nav-id="/4-injection-attacks/" title="Injection Attacks" class="dd-item 
         
-        
+        active
         
         ">
-      <a href="/vi/4-injection-attacks/">
-           <b> 4. </b> Tấn công SQL Injection
+      <a href="/4-injection-attacks/">
+           <b> 4. </b> Injection Attacks
           
             <i class="fas fa-check read-icon"></i>
           
@@ -213,7 +213,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/tags/">English</option>
+                      <option id="en" value="//localhost:1313/4-injection-attacks/" selected>English</option>
                     
                   
               
@@ -227,7 +227,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/tags/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-injection-attacks/">Tiếng Việt</option>
                     
                   
               
@@ -294,6 +294,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://baobaoupcloud.github.io/cs/4-Injection-Attacks/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -314,7 +325,7 @@
             
           
           
-            <a href='/vi/'>CS50 Tuần 5</a> > Tags
+            <a href='/'>CS50 Week 7</a> > Injection Attacks
           
         
           
@@ -341,9 +352,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Tags
+              Injection Attacks
             </h1>
           
 
@@ -351,11 +360,20 @@
 
 
 
+	<p>One of the problems that can arise in real-world applications of SQL is what is called an injection attack. An injection attack is where a malicious actor could input malicious SQL code.
+For example, consider a login screen as follows:</p>
+<p><img alt="login" src="https://raw.githubusercontent.com/baobaoupcloud/cs-w7/main/static/images/4.injectionattacks/injectionattacks1.png"></p>
+<p>You should never trust the users, do not use formatted strings as below to query:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = &#39;</span><span style="color:#e6db74">{</span>username<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39; AND password = &#39;</span><span style="color:#e6db74">{</span>password<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;&#34;</span>)
+</span></span></code></pre></div><p>Without the proper protections in our own code, a bad actor could run malicious code. Consider the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;SELECT COUNT(*) FROM users WHERE username = ? AND password = ?&#34;</span>, username, password)
+</span></span></code></pre></div><p>Notice that because the <code>?</code> is in place, validation can be run on favorite before it is blindly accepted by the query.
+You never want to utilize formatted strings in queries as above or blindly trust the user’s input.
+Utilizing the CS50 Library, the library will sanitize and remove any potentially malicious characters.</p>
+<p>That&rsquo;s all of week 7 ^^</p>
 
 
-<ul>
-	
-</ul>
+
 
 
 <footer class=" footline" >
@@ -444,6 +462,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -464,8 +483,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/3-sql-in-python/" title="SQL in Python"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/vi/1-flat-file-databases/" title="Cơ sở dữ liệu dạng Flat-File" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/1-flat-file-databases/" title="Flat-file Databases" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -1,20 +1,17 @@
 ---
-title : "CS50 Tuần 5"
+title : "CS50 Tuần 7"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 ---
-# CS50 Tuần 5 - Cấu trúc dữ liệu
+# CS50 Tuần 7 - SQL
 
 ### Tổng quan
-Chào mừng đến với tuần thứ 5. Ở tuần này, chúng ta sẽ bàn về cách sắp xếp dữ liệu trong bộ nhớ.
+Chào mừng đến với tuần thứ 7. Tuần này, chúng ta sẽ thảo luận về **SQL** (Structured Query Language - Ngôn ngữ Truy vấn Có Cấu trúc). Chúng ta sẽ đi qua các nội dung sau đây.
 
 
 ### Mục lục
- 1. [Cấu trúc dữ liệu](1-Data-structures)
- 2. [Hàng đợi và Ngăn xếp](2-Stacks-and-Queues)
- 3. [Thay đổi kích thước mảng](3-Resizing-arrays)
- 4. [Danh sách liên kết](4-Linked-lists)
- 5. [Cây](5-Trees)
- 6. [Từ điển](6-Dictionaries)
- 7. [Cây tiền tố](7-Tries)
+ 1. [Cơ sở dữ liệu dạng Flat-File](1-Flat-file-Databases/)
+ 2. [Cơ sở dữ liệu quan hệ](2-Relational-Databases/)
+ 3. [SQL với Python](3-SQL-in-Python/)
+ 4. [Tấn công SQL Injection](4-Injection-Attacks/)

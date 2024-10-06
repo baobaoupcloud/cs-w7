@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/1-data-structures/</loc>
+    <loc>//localhost:1313/vi/1-flat-file-databases/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-data-structures/"
+                href="//localhost:1313/1-flat-file-databases/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-data-structures/"
+                href="//localhost:1313/vi/1-flat-file-databases/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/</loc>
@@ -26,76 +26,40 @@
                 href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-stacks-and-queues/</loc>
+    <loc>//localhost:1313/vi/2-relational-databases/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-stacks-and-queues/"
+                href="//localhost:1313/2-relational-databases/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-stacks-and-queues/"
+                href="//localhost:1313/vi/2-relational-databases/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-resizing-arrays/</loc>
+    <loc>//localhost:1313/vi/3-sql-in-python/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-resizing-arrays/"
+                href="//localhost:1313/3-sql-in-python/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-resizing-arrays/"
+                href="//localhost:1313/vi/3-sql-in-python/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-linked-lists/</loc>
+    <loc>//localhost:1313/vi/4-injection-attacks/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-linked-lists/"
+                href="//localhost:1313/4-injection-attacks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-linked-lists/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-dictionaries/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-dictionaries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-dictionaries/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-trees/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-trees/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-trees/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/7-tries/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-tries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-tries/"
+                href="//localhost:1313/vi/4-injection-attacks/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
